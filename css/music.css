@@ -1,0 +1,145 @@
+html,body{margin: 0; padding: 0; width: 100%; height: 100%;}
+
+body{ 
+  background: #e5e9e8;
+}
+
+.play-panel{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* ============================= 进度条 ================================= */
+.progress-bar{
+  position: relative;
+  height: 4px;
+  background: linear-gradient(0deg, #e1e1e1, #e7e7e7);;
+}
+
+.progress-bar .playing-progress-bar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; 
+}
+
+/* ============================= 控制按钮 ================================= */
+.play-controls{
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+	text-align: center;
+}
+.play-controls .pause-btn,
+.play-controls .play-btn{
+  position: relative;
+	display: inline-block;
+	margin: 0 10px;
+	vertical-align: top;
+	width: var(--size);
+	height: calc(var(--size) + var(--top));
+}
+
+.play-controls .ball{
+	position: absolute;
+	bottom: 0;
+  width: var(--size);
+  height: var(--size);
+  line-height: var(--size);
+  text-align: center;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #fff;
+  cursor: pointer;	
+}
+
+.play-controls .pause-btn::before,
+.play-controls .play-btn::before{
+  content: '';
+  position: absolute;
+  left: 1px; 
+  right: 0;
+	top: 0;
+  bottom: calc(var(--size) / 2);
+  z-index: -1;
+  margin: auto;
+  width: 0; 
+  border-left: 2px solid #fff;
+}
+
+.play-controls .play-btn:nth-child(1){  
+  --size: 92px;
+  --top: 182px; 
+}
+
+
+.play-controls .play-btn:nth-child(2){ 
+  --size: 72px;
+  --top: 242px; 
+}
+
+
+.play-controls .play-btn:nth-child(3){ 
+  --size: 62px;
+  --top: 112px; 
+}
+
+
+.play-controls .play-btn:nth-child(4){ 
+  --size: 72px;
+  --top: 162px; 
+}
+
+
+.play-controls .pause-btn{
+  --size: 82px;
+  --top: 92px; 
+}
+
+
+/* ============================= 模块 ================================= */
+.play-blocks{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 45vh;
+  font-size: 0;
+}
+
+.play-blocks .block{
+  position: relative;
+  display: inline-block;
+  margin: 0 5px;
+  width: calc(100% / 7 - 10px);
+  height: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.play-blocks .block:nth-child(1){
+  background: #ff5f5b;
+}
+.play-blocks .block:nth-child(2){
+  background: #ffb66e;
+}
+.play-blocks .block:nth-child(3){
+  background: #ffd96d;
+}
+.play-blocks .block:nth-child(4){
+  background: #e8f898;
+}
+.play-blocks .block:nth-child(5){
+  background: #8cf6f3;
+}
+.play-blocks .block:nth-child(6){
+  background: #92aef0;
+}
+.play-blocks .block:nth-child(7){
+  background: #b897e4;
+}
+
+
+
+
